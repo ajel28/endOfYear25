@@ -1,11 +1,21 @@
-.nav-bar {
-    display: flex;
+*{
+    margin:auto;
 }
 
-.left {
-    align-items: start;
+body{
+    background-image: linear-gradient(to right, rgb(11, 11, 11) , rgb(75, 75, 75));
 }
 
-.right {
-    align-items: end;
+.logoImg img{
+    width:150px;
+}
+
+.nav-bar{
+    background-color: black;
+    width:200px;
+    margin-right:100%;
+}
+
+ul{
+    text-decoration: none;
 }

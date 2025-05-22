@@ -1,0 +1,11 @@
+.nav-bar {
+    display: flex;
+}
+
+.left {
+    align-items: start;
+}
+
+.right {
+    align-items: end;
+}

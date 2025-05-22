@@ -1,9 +1,11 @@
 *{
     margin:auto;
+    color: goldenrod;
+    font-family: "Anta";
 }
 
 body{
-    background-image: linear-gradient(to right, rgb(11, 11, 11) , rgb(75, 75, 75));
+    background-image: linear-gradient(to right, rgb(0, 0, 0) , rgb(75, 75, 75));
 }
 
 .logoImg img{
@@ -12,10 +14,33 @@ body{
 
 .nav-bar{
     background-color: black;
-    width:200px;
+    width:160px;
     margin-right:100%;
+    border-width: 0px 1px 0px 0px;
+    border-color: goldenrod;
+    border-style: solid;
+    font-weight: 700;
+    font-size: 1.7rem;
 }
 
+.nav-bar *{
+    padding-top:5%;
+    padding-bottom: 5%;
+}
+
+.nav-bar div:hover{
+    background-color: rgb(67, 67, 67);;
+}
+
+.toVault *{
+    display: flex;
+}
+
+
 ul{
+    text-decoration: none;
+}
+
+a{
     text-decoration: none;
 }

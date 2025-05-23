@@ -10,19 +10,17 @@ body{
 
 .logoImg img{
     width:150px;
-    margin-right: 0px;
-    margin-left: 0px;
+    margin-right:10%;
 }
 
-.logoImg{
-    padding-bottom: 0px;
-    display: block;
+.startBody{
+    display: flex;
 }
 
 .nav-bar{
     background-color: black;
     height:100vh;
-    width:40px;
+    width:0px;
     overflow: none;
     margin-right:100%;
     border-width: 0px 1px 0px 0px;
@@ -34,6 +32,7 @@ body{
     position: relative;
     z-index: 1;
     transition: width 0.8s;
+    border-radius: 0px 25px 25px 0px;
 }
 
 .nav-bar:hover{
@@ -64,11 +63,15 @@ nav div:hover{
     background-color: rgb(49, 49, 49);
 }
 
-.logoImg:hover{
-    background-color: black !important;
-    
-}
-
 a{
     text-decoration: none;
+}
+
+.start{
+    position: fixed;
+    background-image: url("img/Start.jpg");
+    width:180vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height:500px;
 }

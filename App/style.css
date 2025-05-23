@@ -1,11 +1,11 @@
 *{
     margin: auto;
-    color: goldenrod;
+    color: rgb(217, 165, 32);
     font-family: "Anta";
 }
 
 body{
-    background-image: linear-gradient(to right, rgb(0, 0, 0) , rgb(48, 48, 0));
+    background-image: linear-gradient(to right, rgb(0, 0, 0) , rgb(55, 55, 0));
 }
 
 .logoImg img{
@@ -74,4 +74,17 @@ a{
     background-repeat: no-repeat;
     background-size: cover;
     height:65%;
+    display: flex;
+}
+
+.startHeader{
+    margin-left: 5%;
+    margin-top:10%;
+    font-size: 330%;
+}
+
+.startPress img{
+    width: 70vh;
+    margin:0;
+    padding:0;
 }

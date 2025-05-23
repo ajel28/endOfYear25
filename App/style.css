@@ -5,7 +5,7 @@
 }
 
 body{
-    background-image: linear-gradient(to right, rgb(0, 0, 0) , rgb(75, 75, 75));
+    background-image: linear-gradient(to right, rgb(0, 0, 0) , rgb(61, 62, 0));
 }
 
 .logoImg img{
@@ -29,13 +29,19 @@ body{
 }
 
 .nav-bar div:hover{
-    background-color: rgb(67, 67, 67);;
+    background-color: rgb(67, 67, 67);
+    color:gold;
 }
+
 
 .toVault *{
     display: flex;
 }
 
+.logoImg:hover{
+    background-color: black !important;
+    
+}
 
 ul{
     text-decoration: none;

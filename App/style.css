@@ -1,11 +1,15 @@
 *{
     margin: auto;
-    color: rgb(217, 165, 32);
+    color: rgb(151, 163, 254);
     font-family: "Anta";
 }
 
+hr{
+    border-color: rgb(130, 145, 255);
+}
+
 body{
-    background-image: linear-gradient(to right, rgb(0, 0, 0) , rgb(55, 55, 0));
+    background-image: linear-gradient(to right, rgb(0, 0, 0) , rgb(24, 0, 71));
 }
 
 .logoImg img{
@@ -24,7 +28,7 @@ body{
     overflow: none;
     margin-right:100%;
     border-width: 0px 1px 0px 0px;
-    border-color: goldenrod;
+    border-color: rgb(130, 145, 255);
     border-style: solid;
     font-weight: 700;
     font-size: 1.4rem;
@@ -47,6 +51,7 @@ body{
 nav div{
     display: flex;
     overflow: hidden;
+    transition: background-color 0.5s;
 }
 
 nav div p{
@@ -115,4 +120,59 @@ a{
 .ourGoalTwo{
     margin-right:5%;
     margin-left:5%;
+}
+
+.welcome h1{
+    font-size: 4rem;
+}
+
+.welcomeText{
+    margin-left:6%;
+    font-size: 1.2rem;
+}
+
+.welcome{
+    display: flex;
+}
+
+.welcomeSideBar{
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.611);
+    margin-right: 4%;
+    margin-left: 3%;
+    margin-top:7%;
+    font-size: 1.7rem;
+    border-radius: 15px;
+    background-color: black;
+    height:100%;
+    width:120%
+}
+
+.welcomeSideBar h3{
+    margin-left: 5%;
+    margin-bottom: 4%;
+    margin-top:5%;
+}
+.welcomeSide{
+    display: flex;
+    margin-bottom: 3%;
+    margin-top: 2%;
+}
+
+footer{
+    background-color: black;
+    margin-top: 5%;
+    height:80px;
+    display: flex;
+}
+
+footer p{
+    margin-left: 2%;
+    padding-top:1%;
+    font-size:1.2rem;
+    padding-bottom:1%;
+}
+
+.socialMedia{
+    margin-left:50%;
+    font-size: 1.9rem;
 }

@@ -200,6 +200,7 @@ footer p{
 .gallery-cell{
     display: flex;
     width:80%;
+    margin-bottom:10px;
 }
 
 .gallery-cell img{

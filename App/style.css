@@ -9,7 +9,7 @@ hr{
 }
 
 body{
-    background-image: linear-gradient(to right, rgb(0, 0, 0) , rgb(24, 0, 71));
+    background-image: linear-gradient(to right, rgb(0, 0, 0) , rgb(7, 0, 71));
 }
 
 .logoImg img{
@@ -70,10 +70,6 @@ nav div:hover{
 
 a{
     text-decoration: none;
-}
-
-.start{
-    width:100%;
 }
 
 .startHeader{
@@ -175,4 +171,51 @@ footer p{
 .socialMedia{
     margin-left:50%;
     font-size: 1.9rem;
+}
+
+.afterNav{
+    width:100%;
+}
+
+.creatorsH1{
+    text-align:center;
+    font-size: 4rem;
+    margin-top:3%;
+}
+
+.gallery{
+    margin-top: 5%;
+    width:100%;
+}
+
+.flickity-prev-next-button{
+    background-color: rgba(255, 255, 255, 0) !important;
+    transition: background-color 0.7s
+}
+
+.flickity-prev-next-button:hover{
+    background-color: white !important;
+}
+
+.gallery-cell{
+    display: flex;
+    width:80%;
+}
+
+.gallery-cell img{
+    width:40%;
+    border-radius: 0px 10px 0px 10px;
+    margin:0px;
+}
+
+.galleryText{
+    padding:0px;
+    text-align:center;
+    margin:0px;
+    margin-left:15%;
+    font-size:1.5rem;
+}
+
+.galleryText *{
+    padding: 0 15% 15% 0;
 }

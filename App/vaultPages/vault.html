@@ -67,15 +67,32 @@
         <h1 class="vaultH1">Vault</h1>
         <div class="buttons">
             <div class="triangleButton">
-                <img src="/img/TriangleButton.png" alt="">
+               <img src="/img/TriangleButton.png" alt=""></a>
             </div>
             <div class="squareAndCircle">
                 <div class="squareButton">
                     <img src="/img/SquareButton.png" alt="">
                 </div>
+                <div class="vaultButtonDesc">
+                    <div class="add">
+                        <h2>Add</h2>
+                    </div>
+                    <div class="remove">
+                        <h2>Remove</h2>
+                    </div>
+                    <div class="overview">
+                        <h2>Overview</h2>
+                    </div>
+                    <div class="edit">
+                        <h2>Edit</h2>
+                    </div>
+                </div>
                 <div class="circleButton">
                     <img src="/img/CircleButton.png" alt="">
                 </div>
+            </div>
+            <div class="xButton">
+                <img src="/img/XButton.png" alt="">
             </div>
         </div>
         
@@ -95,6 +112,39 @@
             </footer>
 
     </div>
+
+    <script>
+        document.querySelector('.circleButton').addEventListener('mouseenter', () => {
+            document.querySelector('.remove').style.display = 'block';
+        });
+        document.querySelector('.circleButton').addEventListener('mouseleave', () => {
+            document.querySelector('.remove').style.display = 'none';
+        });
+
+        document.querySelector('.squareButton').addEventListener('mouseenter', () => {
+            document.querySelector('.add').style.display = 'block';
+        });
+        document.querySelector('.squareButton').addEventListener('mouseleave', () => {
+            document.querySelector('.add').style.display = 'none';
+        });
+
+        document.querySelector('.triangleButton').addEventListener('mouseenter', () => {
+            document.querySelector('.overview').style.display = 'block';
+        });
+        document.querySelector('.triangleButton').addEventListener('mouseleave', () => {
+            document.querySelector('.overview').style.display = 'none';
+        });
+
+        document.querySelector('.xButton').addEventListener('mouseenter', () => {
+            document.querySelector('.edit').style.display = 'block';
+        });
+        document.querySelector('.xButton').addEventListener('mouseleave', () => {
+            document.querySelector('.edit').style.display = 'none';
+        });
+
+
+
+    </script>
 
 </body>
 </html>

@@ -9,7 +9,7 @@ hr{
 }
 
 body{
-    background-image: linear-gradient(to right, rgb(0, 0, 0) , rgb(7, 0, 71));
+    background-image: linear-gradient(to right, rgb(0, 0, 0) , rgb(9, 0, 94));
 }
 
 .logoImg img{
@@ -245,7 +245,7 @@ footer p{
     width: 30%;
 }
 
-.triangleButton img:hover{
+.triangleButton img:hover, .squareAndCircle img:hover, .xButton img:hover{
     cursor: pointer;
 }
 
@@ -256,4 +256,38 @@ footer p{
 
 .squareAndCircle img{
     width:75%;
+}
+
+.xButton{
+    margin-left:41%;
+}
+
+.xButton img{
+    width:30%;
+}
+
+.vaultButtonDesc div{
+    position: absolute;
+    font-size: 3rem;
+}
+
+.vaultButtonDesc{
+    margin-right:28%;
+    margin-bottom:15%;
+}
+
+.add{
+    margin-left:4%;
+}
+
+.overview{
+    margin-left: -2%;
+}
+
+.edit{
+    margin-left: 4%;
+}
+
+.add, .remove, .overview, .edit{
+    display: none;
 }

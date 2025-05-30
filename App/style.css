@@ -177,7 +177,7 @@ footer p{
     width:100%;
 }
 
-.creatorsH1{
+.creatorsH1, .vaultH1{
     text-align:center;
     font-size: 4rem;
     margin-top:3%;
@@ -234,4 +234,26 @@ footer p{
 .aboutUs p{
     margin: 4% 5% 0% 5%;
     font-size: 1.4rem;
+}
+
+.triangleButton{
+    margin-left:41%;
+    margin-top:5%;
+}
+
+.triangleButton img{
+    width: 30%;
+}
+
+.triangleButton img:hover{
+    cursor: pointer;
+}
+
+.squareAndCircle{
+    display:flex;
+    margin-left:5%;
+}
+
+.squareAndCircle img{
+    width:75%;
 }

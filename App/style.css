@@ -237,12 +237,13 @@ footer p{
 }
 
 .triangleButton{
-    margin-left:41%;
+    margin-left:42%;
     margin-top:5%;
+    width:300px;
 }
 
 .triangleButton img{
-    width: 30%;
+    width: 80%;
 }
 
 .triangleButton img:hover, .squareAndCircle img:hover, .xButton img:hover{
@@ -252,18 +253,33 @@ footer p{
 .squareAndCircle{
     display:flex;
     margin-left:5%;
+    margin-top:4%;
+    margin-bottom:4%;
+}
+
+.squareButton, .circleButton{
+    width:300px;
+}
+
+.squareButton{
+    margin-left:10%;
+}
+
+.circleButton{
+    margin-right:10%;
 }
 
 .squareAndCircle img{
-    width:75%;
+    width:80%;
 }
 
 .xButton{
-    margin-left:41%;
+    margin-left:42%;
+    width:300px;
 }
 
 .xButton img{
-    width:30%;
+    width:80%;
 }
 
 .vaultButtonDesc div{

@@ -293,17 +293,36 @@ footer p{
 }
 
 .add{
-    margin-left:4%;
+    margin-left:5%;
 }
 
 .overview{
-    margin-left: -2%;
+    margin-left: 4.5%;
 }
 
 .edit{
-    margin-left: 4%;
+    margin-left: 5.5%;
+}
+
+.remove{
+    margin-left:1%;
 }
 
 .add, .remove, .overview, .edit{
     display: none;
+}
+
+.game-item{
+    margin-left:10%;
+    display: flex;
+    margin-top: 3%;
+}
+
+.list{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.game-item img{
+    width:200px;
 }

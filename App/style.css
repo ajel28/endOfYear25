@@ -313,7 +313,7 @@ footer p{
 }
 
 .game-item{
-    margin-left:10%;
+    margin-left:5%;
     display: flex;
     margin-top: 3%;
 }
@@ -324,5 +324,17 @@ footer p{
 }
 
 .game-item img{
-    width:200px;
+    width:240px;
+}
+
+.game-text{
+    padding-left: 4%;
+    padding-top:2%;
+    font-size: 0.8rem;
+    background-color: black;
+    border-radius: 0 10px 10px 0;
+}
+
+.game-text *{
+    margin-bottom: 3.6%;
 }

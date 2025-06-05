@@ -32,6 +32,10 @@ app.get( "/vault", ( req, res ) => {
     res.sendFile( __dirname + "/vaultPages/vault.html" );
 } );
 
+app.get( "/vault/view", ( req, res ) => {
+    res.sendFile( __dirname + "/vaultPages/view.html");
+})
+
 app.listen( port, () => {
     console.log(`App server listening on ${port}. (Go to http://localhost:${port})`);
 } );

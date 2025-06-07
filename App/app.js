@@ -1,6 +1,6 @@
 const express = require( "express" );
 const app = express();
-const port = 3000;
+const port = 3010;
 
 app.use(express.static(__dirname + '/public'));
 
@@ -39,3 +39,13 @@ app.get( "/vault/view", ( req, res ) => {
 app.listen( port, () => {
     console.log(`App server listening on ${port}. (Go to http://localhost:${port})`);
 } );
+
+const fetch = require('node-fetch');
+
+const getGameData = async() =>{
+    const gamePromise = await fetch(`https://api.rawg.io/api/games?key=b4bacdc459564e0baa08905a2eb534d0`);
+    const gameArray = await gamePromise.json();
+    console.log(gameArray);
+};
+
+getGameData();

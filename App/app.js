@@ -1,4 +1,5 @@
 const express = require( "express" );
+const db = require("./database/connection.js");
 const app = express();
 const port = 3000;
 
@@ -32,9 +33,21 @@ app.get( "/vault", ( req, res ) => {
     res.sendFile( __dirname + "/vaultPages/vault.html" );
 } );
 
+app.get( "/vault/add", ( req, res ) => {
+    res.sendFile( __dirname + "/vaultPages/add.html");
+});
+
 app.get( "/vault/view", ( req, res ) => {
     res.sendFile( __dirname + "/vaultPages/view.html");
-})
+});
+
+const users_sql = "SELECT * FROM user"
+
+db.execute(users_sql, (error, results) => {
+    if (error)
+        throw error
+    console.log(results);
+});
 
 app.listen( port, () => {
     console.log(`App server listening on ${port}. (Go to http://localhost:${port})`);

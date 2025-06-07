@@ -64,46 +64,23 @@
 
     <div class="afterNav">
 
-        <h1 class="vaultH1">Vault</h1>
-        <div class="buttons">
-            <div class="triangleButton">
-               <a href="view.html"><img src="/img/TriangleButton.png" alt=""></a>
-            </div>
-            <div class="squareAndCircle">
-                <div class="squareButton">
-                    <a href="add.html"><img src="/img/SquareButton.png" alt=""></a>
-                </div>
-                <div class="vaultButtonDesc">
-                    <div class="add">
-                        <h2>Add</h2>
-                    </div>
-                    <div class="remove">
-                        <h2>Remove</h2>
-                    </div>
-                    <div class="overview">
-                        <h2>View</h2>
-                    </div>
-                    <div class="edit">
-                        <h2>Edit</h2>
-                    </div>
-                </div>
-                <div class="circleButton">
-                    <img src="/img/CircleButton.png" alt="">
-                </div>
-            </div>
-            <div class="xButton">
-                <img src="/img/XButton.png" alt="">
-            </div>
-        </div>
+        <h1 class="vaultH1">Add New Game</h1>
         
-
-        <div class="vaultText">
-            <p>The Vault is a streamlined platform designed for gamers to organize and manage their personal game libraries all in one place. Whether you’re a casual player or a dedicated collector, The Vault provides an intuitive space to keep track of your entire game inventory. From physical copies to digital downloads, users can easily catalog their games, sort by platform, and view everything at a glance. The visual interface, combined with helpful descriptions and metadata, ensures that your collection stays both accessible and visually engaging.</p>
-
-            <p>Beyond just listing your games, The Vault offers powerful tools to help you add, edit, remove, and review entries in your library. Adding a new game is as simple as filling out a quick form — you can input the title, platform, completion status, and even add a custom image. Need to make changes? The edit feature lets you update your records at any time. If you’re finished with a game or no longer want it tracked, the remove function clears it from your list with a single click. These tools make managing your library efficient and tailored to your needs.</p>
-                
-            <p>One of the standout features of The Vault is its review and overview section, where users can keep personal notes, track progress, or even write quick impressions of their gaming experiences. Whether you want to log achievements, rate your games, or just reflect on what you’ve played, this space adds a personal touch to your collection. The Vault isn't just a tracker — it's your own interactive gaming archive, designed to grow with you as your gaming journey evolves.</p>
+        <div class="addForm">
+            <form action="">
+                <label for="name">Game Name:</label>
+                <input type="text" required name="name" id="name">
+                <br>
+                <label for="platform">Platform Played On:</label>
+                <input type="text" required name="platform" id="platform">
+                <br>
+                <label for="hours">Hours Played:</label>
+                <input type="text" required name="hours" id="hours">
+                <p>The rest of the information will be filled out by our API call!</p>
+                <button type="submit" class="submitButton">Add Game</button>
+            </form>
         </div>
+
 
             <footer>
                 <p>The Vault™, Amir, Elijah, Erik 2025 EOY</p>

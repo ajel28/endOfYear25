@@ -338,3 +338,46 @@ footer p{
 .game-text *{
     margin-bottom: 3.6%;
 }
+
+.vaultText{
+    text-align: center;
+    margin-left:10%;
+    margin-right:10%;
+    margin-top: 5%;
+    font-size:1.6rem;
+}
+
+.vaultText *{
+    margin-bottom: 3%;
+}
+
+.addForm{
+    padding-top:4%;
+    margin-top:5%;
+    text-align: center;
+    background-color: black;
+    width:50%;
+    height:550px;
+    border-radius: 20px;
+    font-size: 2.5rem;
+}
+
+.addForm *{
+    margin-bottom: 6%;
+}
+
+.submitButton{
+    background-color: rgb(130, 145, 255);
+    color:white;
+    border-style: none;
+    height:75px;
+    width:40%;
+    font-size:2rem;
+    border-radius:50px;
+    cursor: pointer;
+}
+
+.submitButton:hover{
+    background-color: white;
+    color:black;
+}

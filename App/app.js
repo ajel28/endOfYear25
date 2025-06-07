@@ -52,13 +52,3 @@ db.execute(users_sql, (error, results) => {
 app.listen( port, () => {
     console.log(`App server listening on ${port}. (Go to http://localhost:${port})`);
 } );
-
-const fetch = require('node-fetch');
-
-const getGameData = async() =>{
-    const gamePromise = await fetch(`https://api.rawg.io/api/games?key=b4bacdc459564e0baa08905a2eb534d0`);
-    const gameArray = await gamePromise.json();
-    console.log(gameArray);
-};
-
-getGameData();

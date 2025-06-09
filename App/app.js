@@ -52,3 +52,7 @@ db.execute(users_sql, (error, results) => {
 app.listen( port, () => {
     console.log(`App server listening on ${port}. (Go to http://localhost:${port})`);
 } );
+
+// const addForm = document.querySelector(".addForm");
+
+// addForm.addEventListener("submit", )

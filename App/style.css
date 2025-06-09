@@ -373,7 +373,7 @@ footer p{
     margin-bottom: 6%;
 }
 
-.submitButton{
+.submitButton, .backButton{
     background-color: rgb(130, 145, 255);
     color:white;
     border-style: none;
@@ -384,7 +384,7 @@ footer p{
     cursor: pointer;
 }
 
-.submitButton:hover{
+.submitButton:hover, .backButton:hover{
     background-color: white;
     color:black;
 }
@@ -465,3 +465,25 @@ font-size: 10rem;
     text-align: center;
     margin-top:0%;
 }
+
+iframe{
+    margin-top:2%;
+    border-radius: 10px;
+}
+
+.platformText{
+    margin-left:6%;
+    margin-right:6%;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.platformText *{
+    margin-top:3%;
+}
+
+#viewBack{
+    margin-left: 30%;
+    margin-top:15%;
+}
+

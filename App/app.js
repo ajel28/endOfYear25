@@ -3,6 +3,8 @@ const db = require("./database/connection.js");
 const app = express();
 const port = 3000;
 
+const DEBUG = true;
+
 app.use( express.urlencoded({ extended: false }) );
 
 app.use(express.static(__dirname + '/img')); // put style.css in the img folder
@@ -75,7 +77,7 @@ app.listen( port, () => {
 
 const create_game_sql = `
   INSERT INTO user_game(user_id, game_name, platform, hours)
-  VALUES (1, ?, ?, ?);
+  VALUES (?, ?, ?, ?);
 `;
 
 app.post("/vault/add", (req, res) => {

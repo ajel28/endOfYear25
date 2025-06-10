@@ -64,24 +64,19 @@
 
     <div class="afterNav">
 
-        <h1 class="vaultH1">Add New Game</h1>
+        <h1 class="vaultH1">Edit Game</h1>
         
-        <div class="Form">
-            <form action="/vault/add" method="post">
+        <div class="Form" id="editForm">
+            <form action="/vault/edit" method="post">
                 <label for="name">Game Name:</label>
-                <input list="addGames" placeholder="Insert Game Here" required name="name" id="name">
-                <datalist id="addGames"></datalist>
+                <input type="text" required name="name" id="name">
                 <br>
                 <label for="platform">Platform Played On:</label>
                 <input type="text" required name="platform" id="platform">
-                <datalist id="addGames">
-
-                </datalist>
                 <br>
                 <label for="hours">Hours Played:</label>
                 <input type="text" required name="hours" id="hours">
-                <p>The rest of the information will be filled out by our API call!</p>
-                <button type="submit" class="submitButton">Add Game</button>
+                <button type="submit" class="submitButton">Confirm Edits</button>
             </form>
         </div>
 
@@ -100,118 +95,6 @@
             </footer>
 
     </div>
-
-    <script>
-        let datalist = document.querySelector("#addGames");
-
-        const games = [
-  "Grand Theft Auto V",
-  "The Witcher 3: Wild Hunt",
-  "Portal 2",
-  "Counter-Strike: Global Offensive",
-  "Tomb Raider (2013)",
-  "Portal",
-  "Left 4 Dead 2",
-  "The Elder Scrolls V: Skyrim",
-  "Red Dead Redemption 2",
-  "BioShock Infinite",
-  "Half-Life 2",
-  "Borderlands 2",
-  "Life is Strange",
-  "BioShock",
-  "Destiny 2",
-  "God of War (2018)",
-  "Fallout 4",
-  "PAYDAY 2",
-  "Limbo",
-  "Team Fortress 2",
-  "DOOM (2016)",
-  "Cyberpunk 2077",
-  "Terraria",
-  "Warframe",
-  "Dota 2",
-  "Grand Theft Auto IV",
-  "Rocket League",
-  "Horizon Zero Dawn",
-  "Metro 2033",
-  "Rise of the Tomb Raider",
-  "Batman: Arkham Knight",
-  "Metal Gear Solid V: The Phantom Pain",
-  "Apex Legends",
-  "The Witcher 2: Assassins of Kings Enhanced Edition",
-  "The Witcher: Enhanced Edition Director's Cut",
-  "Grand Theft Auto: San Andreas",
-  "Half-Life 2: Lost Coast",
-  "Middle-earth: Shadow of Mordor",
-  "The Walking Dead: Season 1",
-  "Hollow Knight",
-  "Little Nightmares",
-  "BioShock 2",
-  "Half-Life",
-  "Half-Life 2: Episode One",
-  "Half-Life 2: Deathmatch",
-  "Half-Life 2: Episode Two",
-  "Dark Souls III",
-  "BioShock Remastered",
-  "Stardew Valley",
-  "Mirror's Edge",
-  "Hitman",
-  "Hotline Miami",
-  "Outlast",
-  "Deus Ex: Mankind Divided",
-  "PlayerUnknown’s Battlegrounds",
-  "Far Cry 3",
-  "Path of Exile",
-  "Garry's Mod",
-  "Amnesia: The Dark Descent",
-  "Alan Wake",
-  "Half-Life Deathmatch: Source",
-  "Wolfenstein: The New Order",
-  "Spec Ops: The Line",
-  "Marvel's Spider-Man",
-  "Saints Row: The Third",
-  "Detroit: Become Human",
-  "Prey",
-  "Fallout: New Vegas",
-  "Borderlands",
-  "The Elder Scrolls V: Skyrim Special Edition",
-  "Dishonored 2",
-  "Don't Starve Together",
-  "Company of Heroes 2",
-  "Injustice: Gods Among Us Ultimate Edition",
-  "Dishonored",
-  "Hellblade: Senua's Sacrifice",
-  "Sid Meier's Civilization V",
-  "Hitman: Absolution",
-  "Grand Theft Auto: Vice City",
-  "Super Meat Boy",
-  "For Honor",
-  "L.A. Noire",
-  "Assassin’s Creed IV: Black Flag",
-  "Control",
-  "Star Wars Jedi: Fallen Order",
-  "Counter-Strike: Source",
-  "Dead Space (2008)",
-  "Uncharted 4: A Thief’s End",
-  "Mass Effect 2",
-  "Just Cause 3",
-  "Metro: Last Light Redux",
-  "Borderlands: The Pre-Sequel",
-  "Counter-Strike",
-  "Death Stranding",
-  "Left 4 Dead",
-  "Metro 2033 Redux",
-  "BioShock 2 Remastered",
-  "Metal Gear Solid V: Ground Zeroes",
-  "Mortal Kombat X",
-  "The Last Of Us Remastered"
-];
-
-for(let i = 0; i<games.length; i++){
-    datalist.innerHTML+= "<option>" + games[i] + "</option>";
-}
-
-    </script>
-
+  
 </body>
 </html>

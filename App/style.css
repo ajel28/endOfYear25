@@ -358,7 +358,7 @@ footer p{
     margin-bottom: 3%;
 }
 
-.addForm{
+.Form{
     padding-top:4%;
     margin-top:5%;
     text-align: center;
@@ -369,7 +369,7 @@ footer p{
     font-size: 2.5rem;
 }
 
-.addForm *{
+.Form *{
     margin-bottom: 6%;
 }
 
@@ -487,3 +487,12 @@ iframe{
     margin-top:15%;
 }
 
+#deleteForm *{
+    margin-top:10%;
+}
+
+#editForm *{
+
+    margin-top:5%;
+
+}

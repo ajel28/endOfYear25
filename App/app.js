@@ -73,13 +73,28 @@ app.listen( port, () => {
     console.log(`App server listening on ${port}. (Go to http://localhost:${port})`);
 } );
 
-const add_game = "Insert into "
-app.post("/add", (req, res) =>{
+const create_game_sql = `
+  INSERT INTO user_game(user_id, game_name, platform, hours)
+  VALUES (1, ?, ?, ?);
+`;
 
-        console.log(req);
-
-
+app.post("/add", (req, res) => {
+  console.log(req);
+  db.execute(
+    create_game_sql,
+    [1, req.body.name, req.body.platform, req.body.hours],
+    (error, results) => {
+      if (DEBUG) console.log(error ? error : results);
+      if (error) res.status(500).send(error); // Internal Server Error
+      else {
+        console.log(results);
+        // results.insertId has the primary key (assignmentId) of the newly inserted row.
+        res.redirect(`/add/${results.insertId}`);
+      }
+    }
+  );
 });
+
 
 
 

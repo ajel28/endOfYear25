@@ -373,7 +373,7 @@ footer p{
     margin-bottom: 6%;
 }
 
-.submitButton{
+.submitButton, .backButton{
     background-color: rgb(130, 145, 255);
     color:white;
     border-style: none;
@@ -384,7 +384,106 @@ footer p{
     cursor: pointer;
 }
 
-.submitButton:hover{
+.submitButton:hover, .backButton:hover{
     background-color: white;
     color:black;
 }
+
+.row1, .row2{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top:2%;
+}
+
+#platform1{
+    background-image: url("img/Xbox.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+#platform2{
+    background-image: url("img/Playstation.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+#platform3{
+    background-image: url("img/PC.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+#platform4{
+    background-image: url("img/Phone.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    background-position: center;
+}
+
+#platform5{
+    background-image: url("img/Nintendo.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    background-position: center;
+}
+
+#platform6{
+    background-image: url("img/Steam.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: center;
+    background-position: center;
+}
+
+.platformBox{
+    width:350px;
+    height:400px;
+    border-radius: 40px;
+}
+
+
+.platformBox:hover *{
+    color:white !important;
+}
+
+.platformBox h2{
+font-size: 10rem;
+}
+
+.platformBox h1{
+    margin-left:4%;
+    margin-top:2%;
+    font-size:5rem;
+}
+
+.platformBox h2{
+    text-align: center;
+    margin-top:0%;
+}
+
+iframe{
+    margin-top:2%;
+    border-radius: 10px;
+}
+
+.platformText{
+    margin-left:6%;
+    margin-right:6%;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.platformText *{
+    margin-top:3%;
+}
+
+#viewBack{
+    margin-left: 30%;
+    margin-top:15%;
+}
+

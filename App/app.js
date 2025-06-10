@@ -1,7 +1,9 @@
 const express = require( "express" );
 const db = require("./database/connection.js");
 const app = express();
-const port = 3000;
+const port = 3010;
+
+app.use( express.urlencoded({ extended: false }) );
 
 app.use(express.static(__dirname + '/public'));
 
@@ -65,12 +67,8 @@ app.get( "/vault/view", ( req, res ) => {
     res.sendFile( __dirname + "/vaultPages/view.html");
 });
 
-const view_games_query = "select "
+const view_games_query = "select ";
 
 app.listen( port, () => {
     console.log(`App server listening on ${port}. (Go to http://localhost:${port})`);
 } );
-
-// const addForm = document.querySelector(".addForm");
-
-// addForm.addEventListener("submit", )

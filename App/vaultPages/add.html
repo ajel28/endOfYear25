@@ -69,10 +69,14 @@
         <div class="addForm">
             <form action="/add" method="post">
                 <label for="name">Game Name:</label>
-                <input type="text" required name="name" id="name">
+                <input list="addGames" placeholder="Insert Game Here" required name="name" id="name">
+                <datalist id="addGames"></datalist>
                 <br>
                 <label for="platform">Platform Played On:</label>
                 <input type="text" required name="platform" id="platform">
+                <datalist id="addGames">
+
+                </datalist>
                 <br>
                 <label for="hours">Hours Played:</label>
                 <input type="text" required name="hours" id="hours">
@@ -98,35 +102,114 @@
     </div>
 
     <script>
-        document.querySelector('.circleButton').addEventListener('mouseenter', () => {
-            document.querySelector('.remove').style.display = 'block';
-        });
-        document.querySelector('.circleButton').addEventListener('mouseleave', () => {
-            document.querySelector('.remove').style.display = 'none';
-        });
+        let datalist = document.querySelector("#addGames");
 
-        document.querySelector('.squareButton').addEventListener('mouseenter', () => {
-            document.querySelector('.add').style.display = 'block';
-        });
-        document.querySelector('.squareButton').addEventListener('mouseleave', () => {
-            document.querySelector('.add').style.display = 'none';
-        });
+        const games = [
+  "Grand Theft Auto V",
+  "The Witcher 3: Wild Hunt",
+  "Portal 2",
+  "Counter-Strike: Global Offensive",
+  "Tomb Raider (2013)",
+  "Portal",
+  "Left 4 Dead 2",
+  "The Elder Scrolls V: Skyrim",
+  "Red Dead Redemption 2",
+  "BioShock Infinite",
+  "Half-Life 2",
+  "Borderlands 2",
+  "Life is Strange",
+  "BioShock",
+  "Destiny 2",
+  "God of War (2018)",
+  "Fallout 4",
+  "PAYDAY 2",
+  "Limbo",
+  "Team Fortress 2",
+  "DOOM (2016)",
+  "Cyberpunk 2077",
+  "Terraria",
+  "Warframe",
+  "Dota 2",
+  "Grand Theft Auto IV",
+  "Rocket League",
+  "Horizon Zero Dawn",
+  "Metro 2033",
+  "Rise of the Tomb Raider",
+  "Batman: Arkham Knight",
+  "Metal Gear Solid V: The Phantom Pain",
+  "Apex Legends",
+  "The Witcher 2: Assassins of Kings Enhanced Edition",
+  "The Witcher: Enhanced Edition Director's Cut",
+  "Grand Theft Auto: San Andreas",
+  "Half-Life 2: Lost Coast",
+  "Middle-earth: Shadow of Mordor",
+  "The Walking Dead: Season 1",
+  "Hollow Knight",
+  "Little Nightmares",
+  "BioShock 2",
+  "Half-Life",
+  "Half-Life 2: Episode One",
+  "Half-Life 2: Deathmatch",
+  "Half-Life 2: Episode Two",
+  "Dark Souls III",
+  "BioShock Remastered",
+  "Stardew Valley",
+  "Mirror's Edge",
+  "Hitman",
+  "Hotline Miami",
+  "Outlast",
+  "Deus Ex: Mankind Divided",
+  "PlayerUnknown’s Battlegrounds",
+  "Far Cry 3",
+  "Path of Exile",
+  "Garry's Mod",
+  "Amnesia: The Dark Descent",
+  "Alan Wake",
+  "Half-Life Deathmatch: Source",
+  "Wolfenstein: The New Order",
+  "Spec Ops: The Line",
+  "Marvel's Spider-Man",
+  "Saints Row: The Third",
+  "Detroit: Become Human",
+  "Prey",
+  "Fallout: New Vegas",
+  "Borderlands",
+  "The Elder Scrolls V: Skyrim Special Edition",
+  "Dishonored 2",
+  "Don't Starve Together",
+  "Company of Heroes 2",
+  "Injustice: Gods Among Us Ultimate Edition",
+  "Dishonored",
+  "Hellblade: Senua's Sacrifice",
+  "Sid Meier's Civilization V",
+  "Hitman: Absolution",
+  "Grand Theft Auto: Vice City",
+  "Super Meat Boy",
+  "For Honor",
+  "L.A. Noire",
+  "Assassin’s Creed IV: Black Flag",
+  "Control",
+  "Star Wars Jedi: Fallen Order",
+  "Counter-Strike: Source",
+  "Dead Space (2008)",
+  "Uncharted 4: A Thief’s End",
+  "Mass Effect 2",
+  "Just Cause 3",
+  "Metro: Last Light Redux",
+  "Borderlands: The Pre-Sequel",
+  "Counter-Strike",
+  "Death Stranding",
+  "Left 4 Dead",
+  "Metro 2033 Redux",
+  "BioShock 2 Remastered",
+  "Metal Gear Solid V: Ground Zeroes",
+  "Mortal Kombat X",
+  "The Last Of Us Remastered"
+];
 
-        document.querySelector('.triangleButton').addEventListener('mouseenter', () => {
-            document.querySelector('.overview').style.display = 'block';
-        });
-        document.querySelector('.triangleButton').addEventListener('mouseleave', () => {
-            document.querySelector('.overview').style.display = 'none';
-        });
-
-        document.querySelector('.xButton').addEventListener('mouseenter', () => {
-            document.querySelector('.edit').style.display = 'block';
-        });
-        document.querySelector('.xButton').addEventListener('mouseleave', () => {
-            document.querySelector('.edit').style.display = 'none';
-        });
-
-
+for(let i = 0; i<games.length; i++){
+    datalist.innerHTML+= "<option>" + games[i] + "</option>";
+}
 
     </script>
 

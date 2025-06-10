@@ -1,7 +1,7 @@
 const express = require( "express" );
 const db = require("./database/connection.js");
 const app = express();
-const port = 3010;
+const port = 3000;
 
 app.use( express.urlencoded({ extended: false }) );
 

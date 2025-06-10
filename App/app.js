@@ -5,7 +5,7 @@ const port = 3000;
 
 app.use( express.urlencoded({ extended: false }) );
 
-app.use(express.static(__dirname + '/public'));
+app.use(express.static(__dirname + '/img')); // put style.css in the img folder
 
 app.get( "/", ( req, res ) => {
     res.sendFile( __dirname + "/start.html" );
@@ -78,7 +78,7 @@ const create_game_sql = `
   VALUES (1, ?, ?, ?);
 `;
 
-app.post("/add", (req, res) => {
+app.post("/vault/add", (req, res) => {
   console.log(req);
   db.execute(
     create_game_sql,
@@ -89,12 +89,8 @@ app.post("/add", (req, res) => {
       else {
         console.log(results);
         // results.insertId has the primary key (assignmentId) of the newly inserted row.
-        res.redirect(`/add/${results.insertId}`);
+        res.redirect(`/vault/add`);
       }
     }
   );
 });
-
-
-
-

@@ -73,4 +73,13 @@ app.listen( port, () => {
     console.log(`App server listening on ${port}. (Go to http://localhost:${port})`);
 } );
 
+const add_game = "Insert into "
+app.post("/add", (req, res) =>{
+
+        console.log(req);
+
+
+});
+
+
 

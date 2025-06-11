@@ -3,7 +3,11 @@ const db = require("./database/connection.js");
 const app = express();
 const port = 3000;
 
-app.use(express.static(__dirname + '/public'));
+const DEBUG = true;
+
+app.use( express.urlencoded({ extended: false }) );
+
+app.use(express.static(__dirname + '/img')); // put style.css in the img folder
 
 app.get( "/", ( req, res ) => {
     res.sendFile( __dirname + "/start.html" );
@@ -61,16 +65,77 @@ app.get( "/vault/add", ( req, res ) => {
     res.sendFile( __dirname + "/vaultPages/add.html");
 });
 
+app.get( "/vault/delete", ( req, res ) => {
+    res.sendFile( __dirname + "/vaultPages/delete.html");
+});
+
+app.get( "/vault/edit", ( req, res ) => {
+    res.sendFile( __dirname + "/vaultPages/edit.html");
+});
+
 app.get( "/vault/view", ( req, res ) => {
     res.sendFile( __dirname + "/vaultPages/view.html");
 });
 
-const view_games_query = "select "
+const view_games_query = "select ";
 
 app.listen( port, () => {
     console.log(`App server listening on ${port}. (Go to http://localhost:${port})`);
 } );
 
-// const addForm = document.querySelector(".addForm");
+const create_game_sql = `
+  INSERT INTO user_game(user_id, game_name, platform, hours)
+  VALUES (?, ?, ?, ?);
+`;
 
-// addForm.addEventListener("submit", )
+app.post("/vault/add", (req, res) => {
+  console.log(req);
+  db.execute(
+    create_game_sql,
+    [1, req.body.name, req.body.platform, req.body.hours],
+    (error, results) => {
+      if (DEBUG) console.log(error ? error : results);
+      if (error) res.status(500).send(error); // Internal Server Error
+      else {
+        console.log(results);
+        // results.insertId has the primary key (assignmentId) of the newly inserted row.
+        res.redirect(`/vault/add`);
+      }
+    }
+  );
+});
+
+const delete_game_sql = `
+DELETE FROM user_game
+WHERE game_name = ?
+`;
+
+app.post("/vault/delete", (req, res) => {
+    console.log(req);
+    db.execute(delete_game_sql, [req.body.deleteName], (error, results) => {
+        if (DEBUG) console.log(error ? error : results);
+        if (error) res.status(500).send(error);
+        else {
+            console.log(results);
+            res.redirect('/vault/delete');
+        }
+    });
+});
+
+const update_game_sql = `
+UPDATE user_game
+SET platform = ?, hours = ?
+WHERE game_name = ?
+`;
+
+app.post("/vault/edit", (req, res) => {
+    console.log(req);
+    db.execute(update_game_sql, [req.body.platform, req.body.hours, req.body.name], (error, results) => {
+        if (DEBUG) console.log(error ? error : results);
+        if (error) res.status(500).send(error);
+        else {
+            console.log(results);
+            res.redirect('/vault/edit');
+        }
+    });
+});

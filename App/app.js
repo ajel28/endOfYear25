@@ -139,3 +139,11 @@ app.post("/vault/edit", (req, res) => {
         }
     });
 });
+
+const view_game_sql = `
+SELECT user_id, name, genre, publisher, release_date, platform, hours, rating
+FROM user_game ug
+JOIN game g on g.name = ug.game_name
+WHERE user_id = 1;
+`
+

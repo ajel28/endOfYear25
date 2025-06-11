@@ -65,6 +65,14 @@ app.get( "/vault/add", ( req, res ) => {
     res.sendFile( __dirname + "/vaultPages/add.html");
 });
 
+app.get( "/vault/delete", ( req, res ) => {
+    res.sendFile( __dirname + "/vaultPages/delete.html");
+});
+
+app.get( "/vault/edit", ( req, res ) => {
+    res.sendFile( __dirname + "/vaultPages/edit.html");
+});
+
 app.get( "/vault/view", ( req, res ) => {
     res.sendFile( __dirname + "/vaultPages/view.html");
 });
@@ -95,4 +103,39 @@ app.post("/vault/add", (req, res) => {
       }
     }
   );
+});
+
+const delete_game_sql = `
+DELETE FROM user_game
+WHERE game_name = ?
+`;
+
+app.post("/vault/delete", (req, res) => {
+    console.log(req);
+    db.execute(delete_game_sql, [req.body.deleteName], (error, results) => {
+        if (DEBUG) console.log(error ? error : results);
+        if (error) res.status(500).send(error);
+        else {
+            console.log(results);
+            res.redirect('/vault/delete');
+        }
+    });
+});
+
+const update_game_sql = `
+UPDATE user_game
+SET platform = ?, hours = ?
+WHERE game_name = ?
+`;
+
+app.post("/vault/edit", (req, res) => {
+    console.log(req);
+    db.execute(update_game_sql, [req.body.platform, req.body.hours, req.body.name], (error, results) => {
+        if (DEBUG) console.log(error ? error : results);
+        if (error) res.status(500).send(error);
+        else {
+            console.log(results);
+            res.redirect('/vault/edit');
+        }
+    });
 });

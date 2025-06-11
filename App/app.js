@@ -1,7 +1,7 @@
 const express = require( "express" );
 const db = require("./database/connection.js");
 const app = express();
-const port = 3000;
+const port = 3020;
 
 const DEBUG = true;
 

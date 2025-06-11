@@ -10,7 +10,7 @@ const getGameData = async() =>{
                 const elementPromise = await fetch(`https://api.rawg.io/api/games/${gameArray.results[i].id}?key=b4bacdc459564e0baa08905a2eb534d0`);
                 const elementArray = await elementPromise.json();
 
-                let genre = "Unkown";
+                let genre = "Unknown";
                 if(gameArray.results[i].genres?.[0]?.name){
                     genre = gameArray.results[i].genres[0].name;
                 }

@@ -1,6 +1,8 @@
 const express = require( "express" );
+const cors = require('cors')
 const db = require("./database/connection.js");
 const app = express();
+app.use(cors())
 const port = 3020;
 
 const DEBUG = true;
@@ -10,7 +12,7 @@ app.use( express.urlencoded({ extended: false }) );
 app.use(express.static(__dirname + '/img')); // put style.css in the img folder
 
 app.get( "/", ( req, res ) => {
-    res.sendFile( __dirname + "/start.html" );
+    res.sendFile( __dirname + "/start.html" );  
 } );
 
 app.get( "/ai", ( req, res ) => {
@@ -77,7 +79,32 @@ app.get( "/vault/view", ( req, res ) => {
     res.sendFile( __dirname + "/vaultPages/view.html");
 });
 
-const view_games_query = "select ";
+
+const view_game_sql = `
+SELECT user_id, name, genre, publisher, release_date, platform, hours, rating, img_url
+FROM user_game ug
+JOIN game g on g.name = ug.game_name
+WHERE user_id = ?;
+`
+
+// db.execute(view_game_sql, [1], (error, results) => {
+//     if (error) 
+//         throw error;
+//     else {
+//         console.log(results);
+//     }
+// });
+
+app.get('/vault/view_games', (req, res) => {
+    db.execute(view_game_sql, [1], (error, results) => {
+    if (error) 
+        throw error;
+    else {
+        console.log(results);
+        res.json(results);
+    }
+});
+})
 
 app.listen( port, () => {
     console.log(`App server listening on ${port}. (Go to http://localhost:${port})`);
@@ -139,11 +166,3 @@ app.post("/vault/edit", (req, res) => {
         }
     });
 });
-
-const view_game_sql = `
-SELECT user_id, name, genre, publisher, release_date, platform, hours, rating
-FROM user_game ug
-JOIN game g on g.name = ug.game_name
-WHERE user_id = 1;
-`
-

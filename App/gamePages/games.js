@@ -1,7 +1,7 @@
 let gamesList = document.querySelector(".listOfGame");
 
 const getGameData = async() =>{
-        const pages = 5;
+        const pages = 7;
         for(let k = 1; k<=pages; k++){
             const gamePromise = await fetch(`https://api.rawg.io/api/games?key=b4bacdc459564e0baa08905a2eb534d0&page=${k}`);
             const gameArray = await gamePromise.json();

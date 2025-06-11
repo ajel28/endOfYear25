@@ -59,6 +59,10 @@
         </nav>
         
     </div>
+    <div>
+        <iframe src="voiceflow-chat.html" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; border: none; z-index: 9999;" allow="microphone; autoplay"></iframe>
+
+    </div>
 
     <div class="afterNav">
         <h1 class="vaultH1">Glitch</h1>
@@ -78,21 +82,6 @@
 
     </div>
 
-    <script type="text/javascript">
-  (function(d, t) {
-      var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
-      v.onload = function() {
-        window.voiceflow.chat.load({
-          verify: { projectID: '68486a18ab06d6ed41287066' },
-          url: 'https://general-runtime.voiceflow.com',
-          versionID: 'production',
-          voice: {
-            url: "https://runtime-api.voiceflow.com"
-          }
-        });
-      }
-      v.src = "https://cdn.voiceflow.com/widget-next/bundle.mjs"; v.type = "text/javascript"; s.parentNode.insertBefore(v, s);
-  })(document, 'script');
-</script>
+
 </body>
 </html>

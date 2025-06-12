@@ -126,7 +126,7 @@ app.post("/vault/add", (req, res) => {
       else {
         console.log(results);
         // results.insertId has the primary key (assignmentId) of the newly inserted row.
-        res.redirect(`/vault/add`);
+        res.redirect(`/vault/view`);
       }
     }
   );
@@ -144,7 +144,7 @@ app.post("/vault/delete", (req, res) => {
         if (error) res.status(500).send(error);
         else {
             console.log(results);
-            res.redirect('/vault/delete');
+            res.redirect('/vault/view');
         }
     });
 });
@@ -162,7 +162,7 @@ app.post("/vault/edit", (req, res) => {
         if (error) res.status(500).send(error);
         else {
             console.log(results);
-            res.redirect('/vault/edit');
+            res.redirect('/vault/view');
         }
     });
 });

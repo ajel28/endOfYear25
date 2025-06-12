@@ -67,7 +67,7 @@
         <h1 class="vaultH1">Games List</h1>
         <div class="list">
 
-            <!-- <div class="game-item">
+            <div class="game-item">
                 <img src="/EldenRing.jpg" alt="">
                 <div class="game-text">
                     <h1>EXAMPLE GAME</h1>
@@ -91,7 +91,7 @@
         </div>
 
 
-        <a href="vault.html"><button class="backButton" id="viewBack">Go Back</button></a>
+        <a href="/vault"><button class="backButton" id="viewBack">Go Back</button></a>
 
             <footer>
                 <p>The Vault™, Amir, Elijah, Erik 2025 EOY</p>
@@ -110,7 +110,7 @@
     <script>
         const listOfGame = document.querySelector(".list");
 
-const list = fetch('http://localhost:3020/vault/view_games')
+const list = fetch('http://localhost:3022/vault/view_games')
     .then((res) => {
         return res.json()
     })

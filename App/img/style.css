@@ -398,28 +398,28 @@ footer p{
 }
 
 #platform1{
-    background-image: url("img/Xbox.png");
+    background-image: url("/Xbox.png");
     background-size: cover;
     background-repeat: no-repeat;
     overflow: hidden;
 }
 
 #platform2{
-    background-image: url("img/Playstation.png");
+    background-image: url("/Playstation.png");
     background-size: cover;
     background-repeat: no-repeat;
     overflow: hidden;
 }
 
 #platform3{
-    background-image: url("img/PC.png");
+    background-image: url("/PC.png");
     background-size: cover;
     background-repeat: no-repeat;
     overflow: hidden;
 }
 
 #platform4{
-    background-image: url("img/Phone.png");
+    background-image: url("/Phone.png");
     background-size: cover;
     background-repeat: no-repeat;
     overflow: hidden;
@@ -427,7 +427,7 @@ footer p{
 }
 
 #platform5{
-    background-image: url("img/Nintendo.png");
+    background-image: url("/Nintendo.png");
     background-size: cover;
     background-repeat: no-repeat;
     overflow: hidden;
@@ -435,7 +435,7 @@ footer p{
 }
 
 #platform6{
-    background-image: url("img/Steam.png");
+    background-image: url("/Steam.png");
     background-size: cover;
     background-repeat: no-repeat;
     overflow: center;

@@ -6,22 +6,18 @@ app.use(cors())
 const port = 3020;
 
 const DEBUG = true;
+
+
 const { auth } = require('express-openid-connect');
 
 const config = {
   authRequired: false,
   auth0Logout: true,
-  secret: '42747fc4a1eabf88214457dac1e9508fa3eef557470ac7d769543c62bec8c865',
-  baseURL: 'http://localhost:3000',
-  clientID: 'ixkYL7Q5vZkolS1dJ32xnM0EAkekkMec',
+  secret: 'a long, randomly-generated string stored in env',
+  baseURL: 'http://localhost:3020',
+  clientID: 'oxBqgC0XywMH3JicHh7NC9IT6kqISq6M',
   issuerBaseURL: 'https://dev-vqqxxfb4mxi0ebz2.us.auth0.com'
 };
-
-const { requiresAuth } = require('express-openid-connect');
-
-app.get('/profile', requiresAuth(), (req, res) => {
-  res.send(JSON.stringify(req.oidc.user));
-});
 
 // auth router attaches /login, /logout, and /callback routes to the baseURL
 app.use(auth(config));
@@ -30,6 +26,11 @@ app.use(auth(config));
 app.get('/', (req, res) => {
   res.send(req.oidc.isAuthenticated() ? 'Logged in' : 'Logged out');
 });
+
+app.get('/profile', requiresAuth(), (req, res) => {
+  res.send(JSON.stringify(req.oidc.user));
+});
+
 
 
 app.use( express.urlencoded({ extended: false }) );

@@ -3,18 +3,18 @@ const cors = require('cors')
 const db = require("./database/connection.js");
 const app = express();
 app.use(cors())
-const port = 3020;
+const port = 3022;
 
 const DEBUG = true;
 
 
-const { auth } = require('express-openid-connect');
+const { auth, requiresAuth } = require('express-openid-connect');
 
 const config = {
   authRequired: false,
   auth0Logout: true,
   secret: 'a long, randomly-generated string stored in env',
-  baseURL: 'http://localhost:3020',
+  baseURL: 'http://localhost:3022',
   clientID: 'oxBqgC0XywMH3JicHh7NC9IT6kqISq6M',
   issuerBaseURL: 'https://dev-vqqxxfb4mxi0ebz2.us.auth0.com'
 };
@@ -23,9 +23,6 @@ const config = {
 app.use(auth(config));
 
 // req.isAuthenticated is provided from the auth router
-app.get('/', (req, res) => {
-  res.send(req.oidc.isAuthenticated() ? 'Logged in' : 'Logged out');
-});
 
 app.get('/profile', requiresAuth(), (req, res) => {
   res.send(JSON.stringify(req.oidc.user));
@@ -82,7 +79,7 @@ app.get("/platforms/xbox", (req, res) => {
 });
 
 app.get( "/signin", ( req, res ) => {
-    res.sendFile( __dirname + "/signInPages/signIn.html" );
+    res.sendFile( __dirname + "/login" );
 } );
 
 app.get( "/vault", ( req, res ) => {

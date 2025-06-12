@@ -1,84 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Anta&family=Blaka&display=swap" rel="stylesheet">
-    <title>The Vault</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anta&family=Blaka&display=swap" rel="stylesheet">
+  <title>The Vault</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 100%;
+    }
+
+    #vf-fullscreen-chat {
+    position:fixed !important;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      height:100%;
+      z-index: 0;
+      border-radius: 0 !important;
+      box-shadow: none !important;
+    }
+
+    .vf-button {
+      display: none !important;
+    }
+  </style>
 </head>
 <body class="Body">
 
-    <div class="nav-bar">
-
-        <div class="logoImg">
-            <a href="/start.html"><img src="/img/Logo.png" alt=""></a>
-        </div>
-
-        <nav>
-
-            <a href="/vaultPages/vault.html">
-                <div class="toVault">
-                    <i class="fa-solid fa-vault"></i><p> Vault</p>
-                </div>
-            </a>
-
-            <a href="/platformPages/platforms.html">
-                <div class="toPlatforms">
-                    <i class="fa-solid fa-computer"></i><p> Platforms</p>
-                </div>
-            </a>
-
-            <a href="gamePages/games.html">
-                <div class="toGames">
-                    <i class="fa-solid fa-gamepad"></i><p> Games</p>
-                </div>
-            </a>
-
-            <a href="/creatorsPages/creators.html">
-                <div class="toPlatforms">
-                    <i class="fa-solid fa-user" id="user"></i><p> Creators</p>
-                </div>
-            </a>
-
-            <a href="/AIPages/ai.html">
-                <div class="toAI">
-                    <i class="fa-solid fa-robot"></i><p> AI</p>
-                </div>
-            </a>
-
-            <a href="/signInPages/signIn.html">
-                <div class="toSignIn">
-                    <i class="fa-solid fa-globe"></i><p> Sign-In</p>
-                </div>
-            </a>
-
-        </nav>
-        
+  <div class="nav-bar">
+    <div class="logoImg">
+      <a href="/start.html"><img src="/img/Logo.png" alt=""></a>
     </div>
 
-    <div class="afterNav">
-        <h1 class="vaultH1">Glitch!</h1>
+    <nav>
+      <a href="/vaultPages/vault.html">
+        <div class="toVault"><i class="fa-solid fa-vault"></i><p> Vault</p></div>
+      </a>
+      <a href="/platformPages/platforms.html">
+        <div class="toPlatforms"><i class="fa-solid fa-computer"></i><p> Platforms</p></div>
+      </a>
+      <a href="/gamePages/games.html">
+        <div class="toGames"><i class="fa-solid fa-gamepad"></i><p> Games</p></div>
+      </a>
+      <a href="/creatorsPages/creators.html">
+        <div class="toPlatforms"><i class="fa-solid fa-user" id="user"></i><p> Creators</p></div>
+      </a>
+      <a href="/AIPages/ai.html">
+        <div class="toAI"><i class="fa-solid fa-robot"></i><p> AI</p></div>
+      </a>
+      <a href="/signInPages/signIn.html">
+        <div class="toSignIn"><i class="fa-solid fa-globe"></i><p> Sign-In</p></div>
+      </a>
+    </nav>
+  </div>
 
-            <footer>
-                <p>The Vault™, Amir, Elijah, Erik 2025 EOY</p>
-                <p class="socialMedia">
-                    <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
-                    |
-                    <a href="https://www.x.com"><i class="fa-brands fa-x-twitter"></i></a>
-                    |
-                    <a href="https://www.twitch.com"><i class="fa-brands fa-twitch"></i></a>
-                    |
-                    <a href="https://www.youtube.com"><i class="fa-brands fa-youtube"></i></a>
-                </p>
-            </footer>
+  <div class="afterNav">
+    <footer class="aiFooter">
+      <p>The Vault™, Amir, Elijah, Erik 2025 EOY</p>
+      <p class="socialMedia">
+        <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a> |
+        <a href="https://www.x.com"><i class="fa-brands fa-x-twitter"></i></a> |
+        <a href="https://www.twitch.com"><i class="fa-brands fa-twitch"></i></a> |
+        <a href="https://www.youtube.com"><i class="fa-brands fa-youtube"></i></a>
+      </p>
+    </footer>
+  </div>
 
-    </div>
-    <script type="text/javascript">
-  (function(d, t) {
+  <!-- Voiceflow Chat Fullscreen Target -->
+  <div id="vf-fullscreen-chat"></div>
+
+  <script type="text/javascript">
+    (function(d, t) {
       var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
       v.onload = function() {
         window.voiceflow.chat.load({
@@ -90,14 +92,16 @@
           },
           render: {
             mode: 'embedded',
-            target: document.getElementById(...)
+            target: document.getElementById('vf-fullscreen-chat')
           }
         });
-      }
-      v.src = "https://cdn.voiceflow.com/widget-next/bundle.mjs"; v.type = "text/javascript"; s.parentNode.insertBefore(v, s);
-  })(document, 'script');
-</script>
 
-
+        window.voiceflow.chat.open();
+      };
+      v.src = "https://cdn.voiceflow.com/widget-next/bundle.mjs";
+      v.type = "text/javascript";
+      s.parentNode.insertBefore(v, s);
+    })(document, 'script');
+  </script>
 </body>
 </html>

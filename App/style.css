@@ -200,6 +200,7 @@ footer p{
 .gallery-cell{
     display: flex;
     width:80%;
+    height:100%;
     margin-bottom:10px;
 }
 
@@ -496,11 +497,7 @@ iframe{
     margin-top:5%;
 
 }
-@media (max-width: 768px) {
-  .nav-bar {
-    width: 50px;
-  }
-  .nav-bar:hover {
-    width: 120px;
-  }
+
+.aiFooter{
+    display: none;
 }
